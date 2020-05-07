@@ -119,7 +119,7 @@ $('#button1').on ('click', () => {
             }   
         }
     }
-    $('h1').hide();
+    $('h1').remove();
     $('body').append ('<h1>'+c1fin+v1fin+c2fin+c3fin+v2fin+c4fin+'</h1>');
     // document.body.innerHTML = v1fin;
 })
