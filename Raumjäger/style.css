@@ -1,0 +1,96 @@
+#x-axis {
+    height: 2px;
+    width: 100%;
+    background-color: red;
+    position: absolute;
+    top: 9px;
+    left: 0px;
+}
+
+#y-axis {
+    height: 2px;
+    width: 100%;
+    background-color: blue;
+    transform: rotate(60deg);
+    position: absolute;
+    top: 9px;
+    left: 0px;
+}
+
+#z-axis {
+    height: 2px;
+    width: 100%;
+    background-color: green;
+    transform: rotate(120deg);
+    position: absolute;
+    top: 9;
+    left: 0px;
+}
+
+#ship1 {
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background-color: black;
+    margin-left: 50%;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+}
+
+#shippic {
+    height: 20px;
+    border-radius: 20px;
+}
+
+.button {
+    height:60px;
+    width: 60px;
+    border-radius: 60px;
+    background-color: gray;
+    text-align: center;
+    line-height: 60px;
+}
+
+#button1 {
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
+}
+#button2 {
+    position: absolute;
+    bottom: 60px;
+    left: 146px;
+}
+#button3 {
+    position: absolute;
+    bottom: 120px;
+    left: 46px;
+}
+
+#button4 {
+    position: absolute;
+    bottom: 0px;
+    left: 114px;
+}
+#button5 {
+    position: absolute;
+    bottom: 0px;
+    left: 46px;
+}
+#button6 {
+    position: absolute;
+    bottom: 120px;
+    left: 114px;
+}
+
+#button7 {
+    position: absolute;
+    bottom: 188px;
+    left: 46px;
+}
+#button8 {
+    position: absolute;
+    bottom: 188px;
+    left: 114px;
+}
