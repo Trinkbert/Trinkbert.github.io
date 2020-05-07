@@ -37,15 +37,15 @@ $('#button1').on ('click', () => {
     let v2a1fix = v2a1var();
     let v2bfix = v2bvar();
     let v2b1fix = v2b1var();
-    console.log ('length: '+length);
-    console.log ('a: '+a);
+    // console.log ('length: '+length);
+    // console.log ('a: '+a);
     if (a===1) {        
         var v1fin = v1a[Math.floor(Math.random()*v1a.length)];
     } else {
         var v1fin = v1b[Math.floor(Math.random()*v1b.length)];
     }
     let b = cointoss();
-    console.log ('b: '+b);
+    // console.log ('b: '+b);
     if (b === 1){
         if (c3afix===9 && ((v2bfix===1 || v2b1fix===1)||(v2afix===1 || v2a1fix===1))) {
             c3afix = 8;
