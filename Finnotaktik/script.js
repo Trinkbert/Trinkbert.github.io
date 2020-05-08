@@ -1,11 +1,11 @@
-function wordlength() {return Math.floor((Math.random() * 4) + 3)};
-function cointoss() {return Math.floor((Math.random() *2) +1)};
-function c3avar() {return Math.floor((Math.random() *11) +0)};
-function c4var() {return Math.floor((Math.random() *5) +0)};
-function v2avar() {return Math.floor((Math.random() *4) +0)};
-function v2a1var() {return Math.floor((Math.random() *6) +0)};
-function v2bvar() {return Math.floor((Math.random() *4) +0)};
-function v2b1var() {return Math.floor((Math.random() *6) +0)};
+function wordlength() { return Math.floor((Math.random() * 3) + 3) };
+function cointoss() { return Math.floor((Math.random() * 2) + 1) };
+function c3avar() { return Math.floor((Math.random() * 11) + 0) };
+function c4var() { return Math.floor((Math.random() * 5) + 0) };
+function v2avar() { return Math.floor((Math.random() * 4) + 0) };
+function v2a1var() { return Math.floor((Math.random() * 6) + 0) };
+function v2bvar() { return Math.floor((Math.random() * 4) + 0) };
+function v2b1var() { return Math.floor((Math.random() * 6) + 0) };
 
 let v1a = ['a', 'o', 'u', 'aa', 'uu', 'ai', 'au', 'iu', 'oi', 'ou', 'ui', 'uo'];
 let v1b = ['e', 'i', 'y', 'ä', 'ö', 'ii', 'ää', 'ei', 'ie', 'yi', 'yö', 'äi', 'äy', 'öi', 'öy'];
@@ -29,7 +29,7 @@ let c2c = ['k', 'n', 'p', 't'];
 
 let c4 = ['l', 'n', 'r', 's', 't'];
 
-$('#button1').on ('click', () => {
+$('#button1').on('click', () => {
     let length = wordlength();
     let a = cointoss();
     let c3afix = c3avar();
@@ -39,87 +39,89 @@ $('#button1').on ('click', () => {
     let v2b1fix = v2b1var();
     // console.log ('length: '+length);
     // console.log ('a: '+a);
-    if (a===1) {        
-        var v1fin = v1a[Math.floor(Math.random()*v1a.length)];
+    if (a === 1) {
+        var v1fin = v1a[Math.floor(Math.random() * v1a.length)];
     } else {
-        var v1fin = v1b[Math.floor(Math.random()*v1b.length)];
+        var v1fin = v1b[Math.floor(Math.random() * v1b.length)];
     }
     let b = cointoss();
+    let c = cointoss();
     // console.log ('b: '+b);
-    if (b === 1){
-        if (c3afix===9 && ((v2bfix===1 || v2b1fix===1)||(v2afix===1 || v2a1fix===1))) {
+    if (b === 1) {
+        if (c3afix === 9 && ((v2bfix === 1 || v2b1fix === 1) || (v2afix === 1 || v2a1fix === 1))) {
             c3afix = 8;
             var c3fin = c3a[c3afix];
-        } else {
-            var c3fin = c3a[c3afix]; 
-        }        
-    } else {
-        var c3fin = c3b[Math.floor(Math.random()*c3b.length)];
-    }if (a===1) {
-        if (length<=5) {
-            var v2fin = v2a[v2afix];
-        } else {       
-        var v2fin = v2a1[v2a1fix];
-    }
-    } else {
-        if (length<=5) {
-            var v2fin = v2b[v2bfix];
-        } else {       
-        var v2fin = v2b1[v2b1fix];
-    }
-    }
-    if (length<=3) {
-        var c1fin = '';
-        var c2fin = '';
-        var c4fin = '';
-    } else {
-        if (length<=4) {
-            var c1fin = c1[Math.floor(Math.random()*c1.length)];
-            var c2fin = '';
-            var c4fin = '';
-        } else {
-            if (length<=5) {
-                var c1fin = c1[Math.floor(Math.random()*c1.length)];
-                var c4fin = '';
-                if (b===1) {
-                    if (c3afix===2||9) {
-                        c2fin = c2a[Math.floor(Math.random()*c2a.length)];
-                    }
-                    if (c3afix===6) {
-                       c2fin = c2b[Math.floor(Math.random()*c2b.length)];
-                    }
-                    if (c3afix===8) {
-                      c2fin = c2c[Math.floor(Math.random()*c2c.length)];
-                    }
+            if (c === 1) {
+                if (c3afix === 2 || 9) {
+                    c2fin = c2a[Math.floor(Math.random() * c2a.length)];
+                }
+                if (c3afix === 6) {
+                    c2fin = c2b[Math.floor(Math.random() * c2b.length)];
+                }
+                if (c3afix === 8) {
+                    c2fin = c2c[Math.floor(Math.random() * c2c.length)];
                 } else {
-                    var c2fin = '';
-                    var c4fin = '';
+                    c2fin = '';
                 }
             } else {
-                let c4fix = c4var();
-                var c4fin = c4[c4fix];
-                if (c3afix===0 && c4fix===4) {var c4fin = 'd'};
-                if (c3afix===3 && c4fix===4) {var c4fin = 'l'};
-                if (c3afix===5 && c4fix===4) {var c4fin = 'n'};
-                if (c3afix===7 && c4fix===4) {var c4fin = 'r'};
-                var c1fin = c1[Math.floor(Math.random()*c1.length)];
-                if (b===1) {
-                    if (c3afix===2||9) {
-                        c2fin = c2a[Math.floor(Math.random()*c2a.length)];
-                    }
-                    if (c3afix===6) {
-                       c2fin = c2b[Math.floor(Math.random()*c2b.length)];
-                    }
-                    if (c3afix===8) {
-                      c2fin = c2c[Math.floor(Math.random()*c2c.length)];
-                    }
-                } else {
-                    var c2fin = '';
+                c2fin = '';
+            }
+        } else {
+            var c3fin = c3a[c3afix];
+            if (c === 1) {
+                if (c3afix === 2 || 9) {
+                    c2fin = c2a[Math.floor(Math.random() * c2a.length)];
                 }
-            }   
+                if (c3afix === 6) {
+                    c2fin = c2b[Math.floor(Math.random() * c2b.length)];
+                }
+                if (c3afix === 8) {
+                    c2fin = c2c[Math.floor(Math.random() * c2c.length)];
+                } else {
+                    c2fin = '';
+                }
+            } else {
+                c2fin = '';
+            }
+        }
+    } else {
+        var c3fin = c3b[Math.floor(Math.random() * c3b.length)];
+        var c2fin = '';
+    } if (a === 1) {
+        if (length <= 4) {
+            var v2fin = v2a[v2afix];
+        } else {
+            var v2fin = v2a1[v2a1fix];
+        }
+    } else {
+        if (length <= 4) {
+            var v2fin = v2b[v2bfix];
+        } else {
+            var v2fin = v2b1[v2b1fix];
         }
     }
+    if (length === 3) {
+        var c1fin = '';
+        // var c2fin = '';
+        var c4fin = '';
+    } else {
+        if (length === 4) {
+            var c1fin = c1[Math.floor(Math.random() * c1.length)];
+            // var c2fin = '';
+            var c4fin = '';
+        } else {
+            let c4fix = c4var();
+            var c4fin = c4[c4fix];
+            if (c3afix === 0 && c4fix === 4) { var c4fin = 'd' };
+            if (c3afix === 3 && c4fix === 4) { var c4fin = 'l' };
+            if (c3afix === 5 && c4fix === 4) { var c4fin = 'n' };
+            if (c3afix === 7 && c4fix === 4) { var c4fin = 'r' };
+            var c1fin = c1[Math.floor(Math.random() * c1.length)];
+
+        }
+    }
+
     $('h1').remove();
-    $('body').append ('<h1>'+c1fin+v1fin+c2fin+c3fin+v2fin+c4fin+'</h1>');
+$('body').append('<h1>' + c1fin + v1fin + c2fin + c3fin + v2fin + c4fin + '</h1>');
     // document.body.innerHTML = v1fin;
 })
